@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://petmedibookapp.github.io/oresignal-web/sitemap.xml
