@@ -61,6 +61,13 @@
   .btn-primary:hover{filter:brightness(1.05); text-decoration:none}
   .btn-ghost{background:transparent; border-color:var(--line2); color:var(--ink)}
   .btn-ghost:hover{border-color:var(--teal); color:var(--teal2); text-decoration:none}
+  .gp-badge{display:inline-flex; align-items:center; gap:11px; background:#000; color:#fff;
+    border:1px solid #3a3f45; border-radius:12px; padding:10px 20px 10px 16px; text-decoration:none; transition:.15s}
+  .gp-badge:hover{background:#141414; border-color:#5a6068; text-decoration:none}
+  .gp-badge svg{width:26px; height:26px; flex:0 0 auto}
+  .gp-badge .gp-txt{display:flex; flex-direction:column; line-height:1.05; text-align:left}
+  .gp-badge .gp-txt small{font-size:9.5px; letter-spacing:.09em; text-transform:uppercase; opacity:.92}
+  .gp-badge .gp-txt b{font-size:18px; font-weight:600}
   .soon{margin-top:16px; font-size:13.5px; color:var(--ink3)}
   .soon b{color:var(--ink2); font-weight:600}
   .hero-art{position:relative; display:flex; justify-content:center}
@@ -132,10 +139,18 @@
       <h1><span data-i="h1a">See supply risk</span> <span class="grad" data-i="h1b">before the market does</span></h1>
       <p class="lede" data-i="lede">OreSignal distils the supply-chain risk of five critical raw materials into one clear daily number — the Asteroid Index.</p>
       <div class="cta-row">
-        <a class="btn btn-primary" id="notify" href="mailto:oresignalapp@gmail.com?subject=OreSignal%20launch%20notification"><span data-i="cta1">Notify me at launch</span></a>
+        <a class="gp-badge" href="https://play.google.com/store/apps/details?id=com.ekdigital.oresignal" target="_blank" rel="noopener" aria-label="Get it on Google Play">
+          <svg viewBox="0 0 40 44" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M2 2 22 22 2 42z" fill="#00C3FF"/>
+            <path d="M2 2 30 12 22 22z" fill="#00E676"/>
+            <path d="M2 42 30 32 22 22z" fill="#FF3A44"/>
+            <path d="M30 12 37.5 16.5a5 5 0 0 1 0 11L30 32 22 22z" fill="#FFCE00"/>
+          </svg>
+          <span class="gp-txt"><small>Get it on</small><b>Google Play</b></span>
+        </a>
         <a class="btn btn-ghost" href="#index"><span data-i="cta2">How it works</span></a>
       </div>
-      <p class="soon"><b data-i="soonb">Coming soon to Google Play.</b> <span data-i="soon">Currently in closed testing — no ads, free during launch.</span></p>
+      <p class="soon"><b data-i="soonb">Now on Google Play.</b> <span data-i="soon">No ads, free during launch.</span></p>
     </div>
     <div class="hero-art">
       <div class="glowbg"></div>
@@ -208,7 +223,7 @@
       </div>
     </div>
     <p class="disc"><span data-i="disc">OreSignal is an informational tool, not financial advice.</span>
-      &nbsp;·&nbsp; © <span id="yr"></span> EK Digital Apps</p>
+      &nbsp;·&nbsp; © <span id="yr"></span> EK Digital Studio</p>
   </div>
 </footer>
 
@@ -216,7 +231,7 @@
 const I = {
   en:{pill:"Critical Minerals Risk Radar",h1a:"See supply risk",h1b:"before the market does",
     lede:"OreSignal distils the supply-chain risk of five critical raw materials into one clear daily number — the Asteroid Index.",
-    cta1:"Notify me at launch",cta2:"How it works",soonb:"Coming soon to Google Play.",soon:"Currently in closed testing — no ads, free during launch.",
+    cta1:"Notify me at launch",cta2:"How it works",soonb:"Now on Google Play.",soon:"No ads, free during launch.",
     idx_eyebrow:"The Asteroid Index",idx_h2:"Four drivers, one 0–100 score",
     idx_sub:"Every day, OreSignal scores five critical raw materials — cobalt, nickel, neodymium, dysprosium and praseodymium — combining four structural drivers into a single number you can read at a glance.",
     d1t:"Extraction concentration",d1d:"How few countries control supply.",d2t:"Processing dependence",d2d:"Bottlenecks in refining and processing.",
@@ -232,7 +247,7 @@ const I = {
 
   de:{pill:"Risikoradar für kritische Rohstoffe",h1a:"Erkenne Lieferrisiken,",h1b:"bevor der Markt reagiert",
     lede:"OreSignal fasst das Lieferkettenrisiko von fünf kritischen Rohstoffen in einer klaren täglichen Zahl zusammen — dem Asteroiden-Index.",
-    cta1:"Zum Start benachrichtigen",cta2:"So funktioniert's",soonb:"Bald bei Google Play.",soon:"Aktuell im geschlossenen Test — werbefrei, zum Start kostenlos.",
+    cta1:"Zum Start benachrichtigen",cta2:"So funktioniert's",soonb:"Jetzt bei Google Play.",soon:"Werbefrei, zum Start kostenlos.",
     idx_eyebrow:"Der Asteroiden-Index",idx_h2:"Vier Treiber, ein Wert von 0–100",
     idx_sub:"Jeden Tag bewertet OreSignal fünf kritische Rohstoffe — Kobalt, Nickel, Neodym, Dysprosium und Praseodym — und vereint vier strukturelle Treiber in einer Zahl, die du auf einen Blick liest.",
     d1t:"Förderkonzentration",d1d:"Wie wenige Länder das Angebot kontrollieren.",d2t:"Verarbeitungsabhängigkeit",d2d:"Engpässe bei Raffination und Verarbeitung.",
@@ -248,7 +263,7 @@ const I = {
 
   es:{pill:"Radar de riesgo de minerales críticos",h1a:"Ve el riesgo de suministro",h1b:"antes que el mercado",
     lede:"OreSignal resume el riesgo de la cadena de suministro de cinco materias primas críticas en un único número diario claro: el Índice Asteroide.",
-    cta1:"Avísame en el lanzamiento",cta2:"Cómo funciona",soonb:"Próximamente en Google Play.",soon:"Actualmente en prueba cerrada — sin anuncios, gratis durante el lanzamiento.",
+    cta1:"Avísame en el lanzamiento",cta2:"Cómo funciona",soonb:"Ya en Google Play.",soon:"Sin anuncios, gratis durante el lanzamiento.",
     idx_eyebrow:"El Índice Asteroide",idx_h2:"Cuatro factores, una puntuación de 0–100",
     idx_sub:"Cada día, OreSignal evalúa cinco materias primas críticas — cobalto, níquel, neodimio, disprosio y praseodimio — combinando cuatro factores estructurales en un solo número que puedes leer de un vistazo.",
     d1t:"Concentración de extracción",d1d:"Cuántos países controlan el suministro.",d2t:"Dependencia de procesamiento",d2d:"Cuellos de botella en la refinación.",
@@ -264,7 +279,7 @@ const I = {
 
   hu:{pill:"Kritikus nyersanyag kockázati radar",h1a:"Lásd az ellátási kockázatot,",h1b:"mielőtt a piac reagál",
     lede:"Az OreSignal öt kritikus nyersanyag ellátásilánc-kockázatát egyetlen tiszta napi számmá sűríti — az Aszteroida Indexbe.",
-    cta1:"Értesíts az indulásról",cta2:"Hogyan működik",soonb:"Hamarosan a Google Playen.",soon:"Jelenleg zárt tesztelés alatt — reklámmentes, az induláskor ingyenes.",
+    cta1:"Értesíts az indulásról",cta2:"Hogyan működik",soonb:"Már a Google Playen.",soon:"Reklámmentes, az induláskor ingyenes.",
     idx_eyebrow:"Az Aszteroida Index",idx_h2:"Négy tényező, egyetlen 0–100 pontszám",
     idx_sub:"Az OreSignal minden nap pontoz öt kritikus nyersanyagot — kobalt, nikkel, neodímium, diszprózium és prazeodímium —, négy strukturális tényezőt egyesítve egyetlen számmá, amelyet egy pillantással leolvashatsz.",
     d1t:"Kitermelési koncentráció",d1d:"Hány ország uralja a kínálatot.",d2t:"Feldolgozási függőség",d2d:"Szűk keresztmetszetek a finomításban.",
@@ -280,7 +295,7 @@ const I = {
 
   pl:{pill:"Radar ryzyka surowców krytycznych",h1a:"Dostrzeż ryzyko dostaw,",h1b:"zanim zareaguje rynek",
     lede:"OreSignal ujmuje ryzyko łańcucha dostaw pięciu krytycznych surowców w jedną wyraźną, codzienną liczbę — Indeks Asteroidy.",
-    cta1:"Powiadom mnie o starcie",cta2:"Jak to działa",soonb:"Wkrótce w Google Play.",soon:"Obecnie w testach zamkniętych — bez reklam, darmowe na starcie.",
+    cta1:"Powiadom mnie o starcie",cta2:"Jak to działa",soonb:"Już w Google Play.",soon:"Bez reklam, darmowe na starcie.",
     idx_eyebrow:"Indeks Asteroidy",idx_h2:"Cztery czynniki, jeden wynik 0–100",
     idx_sub:"Każdego dnia OreSignal ocenia pięć krytycznych surowców — kobalt, nikiel, neodym, dysproz i prazeodym — łącząc cztery czynniki strukturalne w jedną liczbę, którą odczytasz jednym spojrzeniem.",
     d1t:"Koncentracja wydobycia",d1d:"Jak niewiele krajów kontroluje podaż.",d2t:"Zależność od przetwarzania",d2d:"Wąskie gardła w rafinacji i przetwarzaniu.",
